@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Website</title>
+  <style>
+    @font-face{
+font-family:Orbix;
+src:url('../Orbix.otf') format('opentype')
+}
+body{
+font-family:Orbix;
+}
+*{
+  margin:0;
+  padding:0;
+}
+a{
+    text-decoration: none;
+    color: goldenrod;
+}
+li{
+    list-style: none;
+}
+#navbar{
+display:flex;
+justify-content: end;
+gap: 5px;
+background-color:black;
+height:50px;
+position:fixed;
+top:0;
+width:100%;
+}
+#container1{
+  margin-top: 60px;
+  display: flex;
+  flex-wrap:flex ;
+  justify-content: space-evenly;
+
+}
+#lcontent{
+  height:500px;
+  display: flex;
+  flex-wrap: wrap;
+  height:500px;
+}
+#rcontent,#rcontent>img{
+  height:500px;
+  width:800px;
+}
+#btn1{
+  align-self: end;
+  height:30px;
+  width:100px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+}
+#container2{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap:flex ;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+
+}
+#l2content{
+  height:500px;
+  display: flex;
+  flex-wrap: wrap;
+  height:500px;
+}
+#r2content,#r2content>img{
+  height:500px;
+  width:800px;
+}
+#btn2{
+  align-self: end;
+  height:30px;
+  width:100px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+}
+footer{
+  text-align:center;
+    background-color: BLACK;
+    height: 50px;
+    color: goldenrod;
+    position:fixed;
+bottom:0;
+width:100%;
+}
+
+  </style>
+
+</head>
+<body>
+<main>
+<section>
+<ul id="navbar">
+<li><a href="#">HOME</a></li>
+<li><a href="#">ABOUT US</a></li>
+<li><a href="#">CONTACT US</a></li>
+<li><a href="#">HELP</a></li>
+</ul>
+</section>
+<section>
+<div id="container1">
+  <div id="lcontent">
+<h1>WELCOME TO MY WORLD,WHERE I CREATE AMAZING THING</h1>
+<p>WELL THERE IS NOTHING TO TELL ABOUT.I AM JUST A NOVICE WHO STARTED TO CREATE WEB PAGES RECENTLY.CERTAINLY I DONT KNOW MUCH ABOUT DEVELOPING PAGES ON MY OWN.I HAVE TO TAKE HELP FROM MANY RESOURCES LIKE AI TOOLS WHICH ARE AVAILABLE ACROSS INTERNET AND BOOKS.</p>
+<button id="btn1">Find out more</button>  
+</div>
+  <div id="rcontent">
+<img src="../images/image1.webp" />
+  </div>
+</div>
+</section>
+<section>
+<div id="container2">
+  <div id="l2content">
+<h1>ABOUT ME</h1>
+<p>WELL THERE IS NOTHING TO TELL ABOUT.I AM JUST A NOVICE WHO STARTED TO CREATE WEB PAGES RECENTLY.CERTAINLY I DONT KNOW MUCH ABOUT DEVELOPING PAGES ON MY OWN.I HAVE TO TAKE HELP FROM MANY RESOURCES LIKE AI TOOLS WHICH ARE AVAILABLE ACROSS INTERNET AND BOOKS.</p>
+<button id="btn2">Find out more</button>  
+</div>
+  <div id="r2content">
+<img src="../images/image2.webp" />
+  </div>
+</div>
+</section>
+</main>
+    <footer>
+<div>
+<p>
+    &copy; &reg &trade; CREATE BY THE NOVICE WEB DEVELOPER WITH  &hearts;
+</p>
+</div>
+  </footer>
+</body>
+</html>
