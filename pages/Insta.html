@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  *{
+    margin:0;
+    padding:0;
+  }
+  .container{
+display:flex;
+align-items:center;
+justify-content:center;
+ height: 700px;
+    width:100%;
+  }
+  #content{
+    height: 600px;
+    width:100%;
+    display: grid;
+    grid-template-areas: "side header header header header header"
+    "side main main main main main"
+    ;
+grid-template-rows:30px auto;;
+   grid-gap:2px;
+  }
+  #icon{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-image: url("../images/INSTAGRAM.png");
+    background-size: cover;
+  }
+  #title{
+    display: inline-block;
+font-size:30px;
+  }
+  #item1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #item2{
+width:400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  #item3{
+height:50px;
+width:200px;
+  display: flex;
+    justify-content:center;
+    align-items: center;
+gap:10px;
+  }
+#share{
+border-radius:50%;
+ height: 40px;
+    width: 40px;
+background-image: url("../images/share.png");
+background-size: cover;
+}
+#user{
+border-radius:50%;
+ height: 40px;
+    width: 40px;
+background-image: url("../images/r1.jpeg");
+background-size: cover;
+}
+#share{
+border-radius:50%;
+ height: 40px;
+    width: 40px;
+}
+.box1{
+ grid-area:side;
+display: flex;
+flex-direction:column;
+align-items:center;
+gap:40px;
+  }
+  .box2{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+  }
+  
+  .box3{
+margin-top:5px;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
+  gap: 5px;
+    
+  }
+#item2{
+heaght:30px;
+width:200px;
+display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+#home{
+border-radius:50%;
+ height: 40px;
+    width: 40px;
+background-image: url("../images/home.png");
+background-size: cover;
+}
+#search{
+border-radius:50%;
+ height: 40px;
+    width: 40px;
+background-image: url("../images/search.png");
+background-size: cover;
+}
+#msg{
+border-radius:50%;
+ height: 40px;
+    width: 40px;
+background-image: url("../images/msg.png");
+background-size: cover;
+}
+#heart{
+border-radius:50%;
+ height: 40px;
+    width: 40px;
+background-image: url("../images/heart.png");
+background-size: cover;
+}
+
+.items{
+display:flex;
+justify-content: center;
+align-items:space-evenly;
+}
+@media screen and (min-width:800px) and (max-width:1000px){
+.container{
+ height: 600px;
+    width:100%;
+}
+ #content{
+    height: 600px;
+    width:100%;
+    display: grid;
+    grid-template-areas: "header header header header"
+    "main main main main"
+"side side side side"
+    ;
+grid-template-rows:30px auto 30px;
+  }
+.box1{
+width:100%;
+    grid-area: side;
+position:fixed;
+bottom:0;
+z-index:1;
+display:flex;
+flex-direction: row;
+justify-content:space-evenly;
+align-items:start;
+grid-column-start:1;
+grid-column-end:5;
+  }
+}
+.box3{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+  }
+#r1{
+display:flex;4
+}
+#r1img{
+height: 250px;
+    width: 250px;
+background-image: url("../images/r1.jpeg");
+background-size: cover;
+}
+#r2img{
+height: 250px;
+    width: 250px;
+background-image: url("../images/r2.jpeg");
+background-size: cover;
+}
+#r3img{
+height: 250px;
+    width: 250px;
+background-image: url("../images/r3.jpeg");
+background-size: cover;
+}
+#r4img{
+height: 250px;
+    width: 250px;
+background-image: url("../images/r4.jpeg");
+background-size: cover;
+}
+#r5img{
+height: 250px;
+    width: 250px;
+background-image: url("../images/r5.jpeg");
+background-size: cover;
+}
+#r6img{
+height: 250px;
+    width: 250px;
+background-image: url("../images/r6.jpeg");
+background-size: cover;
+}
+#r7img{
+height: 250px;
+    width: 250px;
+background-image: url("../images/r7.jpeg");
+background-size: cover;
+}
+#r8img{
+height: 250px;
+    width: 250px;
+background-image: url("../images/r8.jpeg");
+background-size: cover;
+}
+#r9img{
+height: 250px;
+    width: 250px;
+background-image: url("../images/r9.jpeg");
+background-size: cover;
+}
+#r10img{
+height: 250px;
+    width: 250px;
+background-image: url("../images/r10.jpeg");
+background-size: cover;
+}
+#r11img{
+height: 250px;
+    width: 250px;
+background-image: url("../images/r11.jpeg");
+background-size: cover;
+}
+#r12img{
+height: 250px;
+    width: 250px;
+background-image: url("../images/r12.jpeg");
+background-size: cover;
+}
+#r13img{
+height: 250px;
+    width: 250px;
+background-image: url("../images/r13.jpeg");
+background-size: cover;
+}
+#r14img{
+height: 250px;
+    width: 250px;
+background-image: url("../images/r14.jpeg");
+background-size: cover;
+}
+#r15img{
+height: 250px;
+    width: 250px;
+background-image: url("../images/r15.jpeg");
+background-size: cover;
+}
+#r16img{
+height: 250px;
+    width: 250px;
+background-image: url("../images/r16.jpeg");
+background-size: cover;
+}
+#r17img{
+height: 250px;
+    width: 250px;
+background-image: url("../images/r17.jpeg");
+background-size: cover;
+}
+#r18img{
+height: 250px;
+    width: 250px;
+background-image: url("../images/r18.jpeg");
+background-size: cover;
+}
+#r19img{
+height: 250px;
+    width: 250px;
+background-image: url("../images/r19.jpeg");
+background-size: cover;
+}
+#r20img{
+height: 250px;
+    width: 250px;
+background-image: url("../images/r20.jpeg");
+background-size: cover;
+}
+@media screen and (min-width:1000px) and (max-width:1200px){
+.container{
+ height: 500px;
+    width:100%;
+}
+ #content{
+    height: 500px;
+    width:100%;
+    display: grid;
+    grid-template-areas: "header header header header header"
+    "main main main main main"
+"side side side side side"
+    ;
+grid-template-rows:30px auto 30px;
+  }
+.box1{
+width:100%;
+    grid-area: side;
+position:fixed;
+bottom:0;
+z-index:1;
+display:flex;
+flex-direction:row;
+justify-content:space-evenly;
+align-items:start;
+grid-column-start:1;
+grid-column-end:5;
+  }
+
+
+.box3{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+<div id="content">
+  <div class="box1">
+<div class="items">
+<div id="home"></div>
+<p>Home</p>
+</div>
+<div class="items">
+<div id="search"></div>
+<p>Search</p>
+</div>
+<div class="items">
+<div id="heart"></div>
+<p>Heart</p>
+</div>
+<div class="items">
+<div id="msg"></div>
+<p>Msg</p>
+</div>
+<div class="items">
+<div id="download"></div>
+<p>Download</p>
+</div>
+  </div>
+  <div class="box2">
+    <div id="item1">
+    <div id="icon"></div>
+    <p id="title">INSTAGRAM</p>
+      </div>
+    <div id="item2">
+     <div id="home"></div>
+<div id="search"></div>
+<div id="msg"></div>
+<div id="heart"></div>
+    </div>
+    <div id="item3">
+<div id="share"></div>
+<div id="user"></div>
+</div>
+  </div>
+  <div class="box3">
+<div id="r1">
+<div id="r1img"></div>
+<div id="dcontent"></div>
+</div>
+<div id="r1">
+<div id="r2img"></div>
+<div id="dcontent"></div>
+</div>
+<div id="r1">
+<div id="r3img"></div>
+<div id="dcontent"></div>
+</div>
+<div id="r1">
+<div id="r1img"></div>
+<div id="dcontent"></div>
+</div>
+<div id="r1">
+<div id="r5img"></div>
+<div id="dcontent"></div>
+</div>
+<div id="r1">
+<div id="r6img"></div>
+<div id="dcontent"></div>
+</div>
+<div id="r1">
+<div id="r7img"></div>
+<div id="dcontent"></div>
+</div>
+<div id="r1">
+<div id="r8img"></div>
+<div id="dcontent"></div>
+</div>
+<div id="r1">
+<div id="r9img"></div>
+<div id="dcontent"></div>
+</div>
+<div id="r1">
+<div id="r10img"></div>
+<div id="dcontent"></div>
+</div>
+<div id="r1">
+<div id="r11img"></div>
+<div id="dcontent"></div>
+</div>
+<div id="r1">
+<div id="r12img"></div>
+<div id="dcontent"></div>
+</div>
+<div id="r1">
+<div id="r13img"></div>
+<div id="dcontent"></div>
+</div>
+<div id="r1">
+<div id="r14img"></div>
+<div id="dcontent"></div>
+</div>
+<div id="r1">
+<div id="r15img"></div>
+<div id="dcontent"></div>
+</div>
+<div id="r1">
+<div id="r16img"></div>
+<div id="dcontent"></div>
+</div>
+<div id="r1">
+<div id="r17img"></div>
+<div id="dcontent"></div>
+</div>
+<div id="r1">
+<div id="r18img"></div>
+<div id="dcontent"></div>
+</div>
+<div id="r1">
+<div id="r19img"></div>
+<div id="dcontent"></div>
+</div>
+<div id="r1">
+<div id="r20img"></div>
+<div id="dcontent"></div>
+</div>
+  </div>
+  </div>
+</div>
+</body>
+</html>
