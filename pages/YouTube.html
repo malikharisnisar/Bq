@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  *{
+    margin:0;
+    padding:0;
+  }
+  .container{
+display:flex;
+align-items:center;
+justify-content:center;
+ height: 700px;
+    width:100%;
+  }
+  #content{
+    height: 600px;
+    width:100%;
+    display: grid;
+    grid-template-areas: "side header header header header header"
+    "side main main main main main"
+    ;
+grid-template-rows:30px auto;
+   grid-gap:2px;
+  }
+  #icon{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-image: url("../images/Youtube.png");
+    background-size: cover;
+  }
+  #title{
+    display: inline-block;
+font-size:30px;
+  }
+  #item1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #item2{
+width:400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  #item3{
+height:50px;
+width:200px;
+  display: flex;
+    justify-content:center;
+    align-items: center;
+gap:10px;
+  }
+#login{
+text-align:center;
+border-radius:50%;
+height:40px;
+width:40px;
+}
+#create{
+text-align:center;
+border-radius:24px;
+height:40px;
+width:150px;
+}
+#searchbtn{
+height:35px;
+width:150px;
+border-top-right-radius:20px;
+border-bottom-right-radius:20px;
+}
+#bell{
+border-radius:50%;
+ height: 40px;
+    width: 40px;
+background-image: url("../images/bell.jpg");
+background-size: cover;
+}
+.box1{
+ grid-area:side;
+display: flex;
+flex-direction:column;
+align-items:center;
+gap:10px;
+  }
+  .box2{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+  }
+  
+  .box3{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
+  gap: 5px;
+    
+  }
+  video{
+    border-radius:16px;
+margin-top:10px;
+  }
+input{
+height:30px;
+width:600px;
+}
+
+#home{
+border-radius:50%;
+ height: 20px;
+    width: 20px;
+background-image: url("../images/home.svg");
+background-size: cover;
+}
+#shorts{
+border-radius:50%;
+ height: 20px;
+    width: 20px;
+background-image: url("../images/shorts.svg");
+background-size: cover;
+}
+#subscription{
+border-radius:50%;
+ height: 20px;
+    width: 20px;
+background-image: url("../images/subscription.png");
+background-size: cover;
+}
+#you{
+border-radius:50%;
+height: 20px;
+ width: 20px;
+background-image: url("../images/you.png");
+background-size: cover;
+}
+#download{
+border-radius:50%;
+ height: 20px;
+    width: 20px;
+background-image: url("../images/download.png");
+background-size: cover;
+}
+.items{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+/*for iphonex*/
+
+@media screen and (min-width:800px)  and (max-width:1000px){
+.container{
+ height: 600px;
+    width:100%;
+}
+ #content{
+    height: 600px;
+    width:100%;
+    display: grid;
+    grid-template-areas: "header header header header header"
+    "main main main main main"
+"side side side side side"
+    ;
+grid-template-rows:30px auto 30px;
+  }
+.box1{
+width:100%;
+    grid-area: side;
+position:fixed;
+bottom:0;
+z-index:1;
+display:flex;
+flex-direction:row;
+justify-content:space-evenly;
+align-items:start;
+grid-row-start:1;
+grid-row-end:5;
+  }
+
+video{
+width:150px;
+}
+.box3{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+
+  }
+} 
+/*iphone se,iphone8,iphone8+*/
+@media screen and (min-width:1000px) and (max-width:1200px){
+.container{
+ height: 500px;
+    width:100%;
+}
+ #content{
+    height: 500px;
+    width:100%;
+    display: grid;
+    grid-template-areas: "header header header header header"
+    "main main main main main"
+"side side side side side"
+    ;
+grid-template-rows:30px auto 30px;
+  }
+.box1{
+width:100%;
+    grid-area: side;
+position:fixed;
+bottom:0;
+z-index:1;
+display:flex;
+flex-direction:row;
+justify-content:space-evenly;
+align-items:start;
+grid-row-start:1;
+grid-row-end:5;
+  }
+
+video{
+width:100px;
+border: 1px solid;
+}
+.box3{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+<div id="content">
+  <div class="box1">
+<div class="items">
+<div id="home"></div>
+<p>Home</p>
+</div>
+<div class="items">
+<div id="shorts"></div>
+<p>Shorts</p>
+</div>
+<div class="items">
+<div id="subscription"></div>
+<p>Subscription</p>
+</div>
+<div class="items">
+<div id="you"></div>
+<p>You</p>
+</div>
+<div class="items">
+<div id="download"></div>
+<p>Download</p>
+</div>
+  </div>
+  <div class="box2">
+    <div id="item1">
+    <div id="icon"></div>
+    <p id="title">YouTube</p>
+      </div>
+    <div id="item2">
+      <input id="search" type="text">
+      <button id="searchbtn">search</button>
+    </div>
+    <div id="item3">
+<button id="create">+ Create</button>
+<div id="bell"></div>
+<button id="login">M</button>
+</div>
+  </div>
+  <div class="box3">
+<video controls height="150" width="200">
+  <source src="../images/v1.mp4" type="video/mp4" /></video>
+<video controls height="150" width="200">
+  <source src="../images/v1.mp4" type="video/mp4" /></video>
+<video controls height="150" width="200">
+  <source src="../images/v1.mp4" type="video/mp4" /></video>
+<video controls height="150" width="200">
+  <source src="../images/v1.mp4" type="video/mp4" /></video>
+<video controls height="150" width="200">
+  <source src="../images/v1.mp4" type="video/mp4" /></video>
+<video controls height="150" width="200">
+  <source src="../images/v1.mp4" type="video/mp4" /></video>
+<video controls height="150" width="200">
+  <source src="../images/v1.mp4" type="video/mp4" /></video>
+<video controls height="150" width="200">
+  <source src="../images/v1.mp4" type="video/mp4" /></video>
+<video controls height="150" width="200">
+  <source src="../images/v1.mp4" type="video/mp4" /></video>
+<video controls height="150" width="200">
+  <source src="../images/v1.mp4" type="video/mp4" /></video>
+  </div>
+  </div>
+</div>
+</body>
+</html>
