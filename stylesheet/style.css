@@ -1,0 +1,64 @@
+/*@import url(https://db.onlinewebfonts.com/c/75cc18c25ad2727b351efcc334faa44f?family=Aurora+V1);*/
+@font-face{
+font-family:Orbix;
+src:url('/fonts/Orbix.otf') format('opentype'),
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+
+font-family:Orbix;
+}
+a{
+    text-decoration: none;
+    margin: 5px;
+    color: goldenrod;
+}
+li{
+    list-style: none;
+    float:right;
+
+}
+header{
+display:inline-block;
+background-color:black;
+height:50px;
+position:fixed;
+top:0;
+width:100%
+}
+
+footer{
+text-align:center;
+    background-color: BLACK;
+    border: 2PX SOLID WHITE;
+    height: 50px;
+    color: goldenrod;
+    position:fixed;
+bottom:0;
+width:100%;
+}
+input,textarea{
+    list-style: none;
+font-weight:bold;
+text-align:center;
+border:2px solid black;
+border-radius:16px;
+}
+
+#home{
+    height:350px;
+background-color:aqua;
+}
+#contact{
+background-color:lime;
+height:350px;
+}
+#about{
+    height:350px;
+background-color:greenyellow;
+}
+
+
