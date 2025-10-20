@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+*{
+margin:0;
+padding:0;
+}
+#container{
+height:100vh;
+background-color:aliceblue;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+#content{
+height:70vh;
+width:50%;
+background-color:bisque;
+display:flex;
+flex-direction:column;
+justify-content:space-around;
+align-items:center;
+}
+#btn{
+height:20px;
+width:100%;
+display:flex;
+justify-content:space-around;
+align-items:center;
+}
+button{
+height:50px;
+width:30%;
+font-size: 30px;
+border-radius:24px;
+}
+h1{
+  font-size: 80px;
+  font-weight:900 ;
+}
+label{
+  font-size: 5vh;
+  font-weight:700 ;
+}
+.div{
+  height:15vh;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+align-items:center;
+}
+input{
+  height:10vh;
+  width:150%;
+  border-radius:24px;
+}
+</style>
+</head>
+<body>
+<div id="container">
+<div id="content">
+<div>
+<h1>LOGIN FORM</h1>
+</div>
+<form>
+<div class="div">
+<label>USERNAME</label><br>
+<input type="text" for="username" id="username" />
+</div><br>
+<div class="div">
+<label>PASSWORD</label><br>
+<input type="password" for="password"id="password"/>
+</div><br>
+</form>
+<div id="btn">
+<button id="register">REGISTER</button>
+<button id="login">LOG IN</button>
+</div>
+<p id="p"></p>
+</div>
+</div>
+</body>
+<script>
+let register=document.getElementById("register");
+register.addEventListener("click",()=>{
+window.location="./reg.html"
+})
+let login=document.getElementById("login");
+login.addEventListener("click",()=>{
+let p=document.getElementById("p");
+let user=localStorage.getItem("username");
+let password=localStorage.getItem("password");
+let username=document.getElementById("username").value;
+let pass=document.getElementById("password").value;
+if (username === "" || pass === ""){
+p.innerText = "Fill Your Credentials First"
+}
+if(username === user && pass === password){
+p.innerText = "Login SuccessFul"
+window.location.href="./final.html"
+}
+})
+</script>
+</html>
