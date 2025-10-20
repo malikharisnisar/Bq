@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+*{
+margin:0;
+padding:0;
+text-align: center;
+}
+#container{
+height:100vh;
+background-color:aliceblue;
+display:flex;
+flex-direction: column;
+justify-content:center;
+align-items:center;
+}
+#content{
+height:90vh;
+width:70%;
+background-color:bisque;
+display:flex;
+flex-direction:column;
+justify-content:space-around;
+align-items:center;
+}
+form{
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+align-items:center;
+}
+h1{
+  font-size: 80px;
+  font-weight:900 ;
+}
+label{
+  font-size: 5vh;
+  font-weight:700 ;
+}
+.div{
+  height:13vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+align-items:center;
+}
+input{
+  height:10vh;
+  width:150%;
+  border-radius:24px;
+}
+#submit{
+  height: 50px;
+  width: 90px;
+  border-radius: 24px;
+}
+#para,a{
+  letter-spacing: 6px;
+  font-size: 30px;
+  font-weight:600;
+}
+</style>
+</head>
+<body>
+<div id="container">
+  <div id="content">
+<h1>REGISTRATION FORM</H1>
+<form id="form">
+<div class="div">
+<label for="username">USERNAME</label><br>
+<input type="text" id="username" />
+</div><br>
+<div class="div">
+<label for="email">EMAIL</label><br>
+<input type="email" id="email" />
+</div>
+<div class="div">
+<label for="password">PASSWORD</label><br>
+<input type="password" id="password" />
+</div><br>
+<div class="div">
+<label for="repassword">RETYPE PASSWORD</label><br>
+<input type="password" id="repassword" />
+</div><br>
+<div class="div">
+<input type="submit" id="submit" />
+</div><br>
+</form>
+<p id="p"></p>
+</div>
+<p id="para">Already Have A Account<a href="./log.html">LogIn</a></p>
+</div>
+</body>
+<script>
+
+let form=document.getElementById("form");
+form.addEventListener("submit",(e)=>{
+e.preventDefault();
+let p=document.getElementById("p");
+let user=document.getElementById("username").value;
+let email=document.getElementById("email").value;
+let password=document.getElementById("password").value;
+let repassword=document.getElementById("repassword").value;
+if(user==="" || email ==="" || password ==="" || repassword ===""){
+p.innerText="please fill yout credentials first"
+}
+if(user && email && password && repassword){
+if(password !== repassword){
+p.innerText = "Your Retypepassword Is Different.Kindly Check."
+} else {
+let username=localStorage.setItem("username",user)
+let pass=localStorage.setItem("password",password)
+p.innerText="Registration Successful.You Can Login Now"
+}
+}
+})
+
+
+</script>
+</html>
